@@ -1,0 +1,20 @@
+{
+  "/api1": {
+    "target": "https://suggests.rasp.yandex.net",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api1": ""
+    }
+  },
+  "/api2": {
+    "target": "https://api.rasp.yandex.net",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api2": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<nav class="header">
+    <div class="button-container">
+      <button class="nav-button" (click)="routeMainPage()">Main</button>
+            @if(toggleButton()){
+                <button class="nav-button"(click)="routePolygonPage()">Transport</button>
+            } @else {
+                <button class="nav-button" (click)="routeMapPage()">Map</button>
+            }
+    </div>
+
+  </nav>
+  <router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+@if (isModalWindowEdit()) {
+    <modal-window-edit></modal-window-edit>
+}
+<div class="card h-100 shadow-sm product-card">
+    <img class="card-img-top" [src]="item.imageUrl" [alt]="item.name">
+    <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <p class="card-text">{{ item.description }}</p>
+    </div>
+    <div class="card-footer bg-transparent border-top-0">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <!-- Кнопка для просмотра деталей -->
+                <a href="#" class="btn btn-sm btn-outline-primary mr-2">View Details</a>
+            </div>
+            <div>
+                <!-- Кнопка для удаления товара -->
+                <button class="btn btn-sm btn-outline-danger mr-2" (click)="deleteProduct(item)">
+                    Delete
+                </button>
+                <!-- Кнопка для редактирования товара -->
+                <button class="btn btn-sm btn-outline-secondary" (click)="editProduct(item)">
+                    Edit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="modal fade" [class.show]="isOpen" tabindex="-1" [ngStyle]="{ 'display': isOpen ? 'block' : 'none' }">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ isEditOrCreate ? 'Create item' : 'Edit item' }}</h5>
+                <button type="button" class="btn-close" (click)="closeModal()"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="modalForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" formControlName="name">
+                        <div *ngIf="modalForm.get('name')?.invalid && modalForm.get('name')?.touched"
+                             class="text-danger">
+                            Name is required and must be between 5 and 20 characters.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" rows="3"
+                                  formControlName="description"></textarea>
+                        <div *ngIf="modalForm.get('description')?.invalid && modalForm.get('description')?.touched"
+                             class="text-danger">
+                            Description is required and must be between 5 and 20 characters.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="imageUrl" class="form-label">Image URL</label>
+                        <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl">
+                        <div *ngIf="modalForm.get('imageUrl')?.invalid && modalForm.get('imageUrl')?.touched"
+                             class="text-danger">
+                            Image URL is required and must be between 5 and 20 characters.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="saveValueModal()"
+                        [disabled]="modalForm.invalid">Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+$primary-color: #ff6f61;
+$secondary-color: #ffcc00;
+$text-color: #ffffff;
+$hover-color: #ff8a73;
+$gradient-start: #ff7e5f;
+$gradient-end: #feb47b;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, $gradient-start, $gradient-end);
+  color: $text-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .button-container {
+    display: flex;
+    gap: 10px;
+
+    .nav-button {
+      background-color: $primary-color;
+      border: none;
+      color: $text-color;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 30px;
+      transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        background-color: $hover-color;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px $secondary-color;
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

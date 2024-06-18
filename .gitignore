@@ -1,0 +1,68 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+dist/
+tmp/
+out-tsc/
+built/
+build/
+
+# dependencies
+node_modules/
+jspm_packages/
+
+# IDEs and editors
+.idea/
+.vscode/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Angular specific
+.angular/cache/
+.angular/
+
+# misc
+.DS_Store
+Thumbs.db
+.user/
+.history
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+protractor-coverage/
+testem.log
+typings/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE - JetBrains
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# AWS SAM specific
+.aws-sam/build/
+.aws-sam/deploy/
+
+# e2e test outputs
+cypress/screenshots/
+cypress/videos/
+cypress/reports/
+
+# environment variable files
+.env
+.env.*
