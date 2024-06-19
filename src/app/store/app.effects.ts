@@ -1,6 +1,5 @@
 import {Injectable} from "@angular/core";
 import {Actions, ofType, createEffect} from "@ngrx/effects";
-import {Router} from "@angular/router";
 import {ToastrService} from 'ngx-toastr';
 import {
     createProductItemAction,
@@ -23,7 +22,6 @@ import {ProductService} from "../service/product-service";
 @Injectable()
 export class AppEffects {
     constructor(private actions$: Actions,
-                private router: Router,
                 private productService: ProductService,
                 private toastr: ToastrService) {
     }

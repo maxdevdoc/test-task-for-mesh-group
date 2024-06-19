@@ -1,7 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Item} from "../../modal-interface/modal-item.interface";
 
 @Injectable({
     providedIn: "root",
@@ -29,9 +28,6 @@ export class ProductService {
     updateItem(id: string, name: string, description: string, imageUrl: string): Observable<any> {
         const url = `${this.apiUrl}/${id}`;
         const updatedItem = {id, name, description, imageUrl};
-        console.log('---------')
-        console.log(id)
-        console.log('---------')
         return this.http.put<any>(url, updatedItem);
     }
 

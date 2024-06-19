@@ -2,13 +2,11 @@
 <div class="main-container container">
     <h1 class="my-4 text-center">Main Page</h1>
 
-
     <div class="text-center mb-4">
         <button class="btn btn-success" (click)="addProduct()">
             Add New Product
         </button>
     </div>
-
     <div class="row">
         @for (item of items(); track item) {
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">

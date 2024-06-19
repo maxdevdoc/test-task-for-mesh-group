@@ -42,9 +42,8 @@ export class ItemComponent implements OnInit {
         this.store.dispatch(getProductItemAction({offset: 50}));
     }
 
-    editProduct(item: any) {
+    editProduct(item: Item) {
         this.store.dispatch(setSelectItemAction({item: this.item}))
         this.store.dispatch(openModalWindowAction({isEditOrCreate: this.isEditOrCreate}))
     }
-
 }

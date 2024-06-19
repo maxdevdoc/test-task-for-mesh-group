@@ -1,7 +1,9 @@
 import {Component, OnInit, signal} from "@angular/core";
 import {Store} from "@ngrx/store";
 import {
-    getProductItemAction, openModalWindowAction, setInitialItemAction
+    getProductItemAction,
+    openModalWindowAction,
+    setInitialItemAction
 } from "../store/app.action";
 import {selectItems} from "../store/app.selector";
 import {initialAppState} from "../store/app.state";

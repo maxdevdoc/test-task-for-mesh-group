@@ -2,14 +2,6 @@ import {createAction, props} from "@ngrx/store";
 import {Item} from "../../modal-interface/modal-item.interface";
 
 
-//////////////////NAVIGATION BLOCK//////////////////////////
-export const navigateToProductAction = createAction(
-    "[Main page] Navigate to product"
-);
-
-export const navigationToMainPageAction = createAction(
-    "[Product page] Navigate to main page"
-);
 ////////////////////MODAL WINDOW EDIT///////////////////////
 export const openModalWindowAction = createAction(
     "[Main page] Open modal window edit",
